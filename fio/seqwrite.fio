@@ -1,0 +1,7 @@
+[global]
+include global.fio
+
+[Sequential Write]
+rw=write
+bs=128K
+
