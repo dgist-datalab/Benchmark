@@ -1,0 +1,27 @@
+[global]
+include global_sp.fio
+rw=randrw
+
+[Mixed Random R/W 1]
+filename=/media/robusta/fio1
+
+[Mixed Random R/W 2]
+filename=/media/robusta/fio2
+
+[Mixed Random R/W 3]
+filename=/media/robusta/fio3
+
+[Mixed Random R/W 4]
+filename=/media/robusta/fio4
+
+[Mixed Random R/W 5]
+filename=/media/robusta/fio5
+
+[Mixed Random R/W 6]
+filename=/media/robusta/fio6
+
+[Mixed Random R/W 7]
+filename=/media/robusta/fio7
+
+[Mixed Random R/W 8]
+filename=/media/robusta/fio8

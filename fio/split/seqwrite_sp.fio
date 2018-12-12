@@ -1,0 +1,29 @@
+[global]
+include global_sp.fio
+rw=write
+bs=128K
+
+[Sequential Write 1]
+filename=/media/robusta/fio1
+
+[Sequential Write 2]
+filename=/media/robusta/fio2
+
+[Sequential Write 3]
+filename=/media/robusta/fio3
+
+[Sequential Write 4]
+filename=/media/robusta/fio4
+
+[Sequential Write 5]
+filename=/media/robusta/fio5
+
+[Sequential Write 6]
+filename=/media/robusta/fio6
+
+[Sequential Write 7]
+filename=/media/robusta/fio7
+
+[Sequential Write 8]
+filename=/media/robusta/fio8
+

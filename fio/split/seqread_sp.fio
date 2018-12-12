@@ -1,0 +1,29 @@
+[global]
+include global_sp.fio
+rw=read
+bs=128K
+
+[Sequential Read 1]
+filename=/media/robusta/fio1
+
+[Sequential Read 2]
+filename=/media/robusta/fio2
+
+[Sequential Read 3]
+filename=/media/robusta/fio3
+
+[Sequential Read 4]
+filename=/media/robusta/fio4
+
+[Sequential Read 5]
+filename=/media/robusta/fio5
+
+[Sequential Read 6]
+filename=/media/robusta/fio6
+
+[Sequential Read 7]
+filename=/media/robusta/fio7
+
+[Sequential Read 8]
+filename=/media/robusta/fio8
+
