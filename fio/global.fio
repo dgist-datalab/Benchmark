@@ -1,4 +1,5 @@
 ioengine=libaio
+filename=/media/robusta/fio
 
 bs=8K
 iodepth=4
