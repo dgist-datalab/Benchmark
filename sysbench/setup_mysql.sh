@@ -11,6 +11,11 @@ NC='\033[0m'
 echo "[SETUP] Stopping MySQL daemon..."
 sudo service mysql stop
 
+echo "[SETUP] Set alias to avoid apparmor"
+sudo cp /etc/apparmor.d/tunables/alias /etc/apparmor.d/tunables/alias.old
+sudo echo "alias /var/lib/mysql/ -> $MOUNT_PATH/mysql/," >> /etc/apparmor.d/tunables/alias
+sudo service apparmor reload
+
 echo "[SETUP] Clone the original @datadir to $MOUNT_PATH/mysql"
 sudo mkdir -p $MOUNT_PATH/mysql
 

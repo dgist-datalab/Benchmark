@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# 10,000,000 -> 1.8G ~ 2G
+TABLE_SIZE=100000000
+NUM_REQ=200000
+
 USER=root
 PASSWORD=191066
 SOCK_PATH=/var/run/mysqld/mysqld.sock
@@ -11,7 +15,7 @@ date
 
 echo -e "${GREEN}[SYSBENCH] Preparing table...${NC}"
 sudo sysbench --test=oltp \
-		--oltp-table-size=50000000 \
+		--oltp-table-size=$TABLE_SIZE \
 		--db-driver=mysql \
 		--mysql-db=dbtest \
 		--mysql-table-engine=innodb \
@@ -24,11 +28,13 @@ date
 
 echo -e "${GREEN}[SYSBENCH] Running benchmark...${NC}"
 sudo sysbench --test=oltp \
-		--oltp-table-size=500000000 \
+		--oltp-table-size=$TABLE_SIZE \
+		--oltp-test-mode=complex \
+		--oltp-dist-type=uniform \
 		--oltp-read-only=off \
 		--num-threads=16 \
 		--max-time=0 \
-		--max-requests=1000000 \
+		--max-requests=$NUM_REQ \
 		--db-driver=mysql \
 		--mysql-db=dbtest \
 		--mysql-table-engine=innodb \
@@ -39,8 +45,8 @@ sudo sysbench --test=oltp \
 
 date
 
-echo -e "${GREE}[SYSBENCH] Cleaning table...${NC}"
-sudo sysbench --test=oltp \
+echo -e "${GREEN}[SYSBENCH] Cleaning table...${NC}"
+ sudo sysbench --test=oltp \
 		--db-driver=mysql \
 		--mysql-db=dbtest \
 		--mysql-table-engine=innodb \
