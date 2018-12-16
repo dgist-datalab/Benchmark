@@ -3,10 +3,10 @@ ioengine=libaio
 bs=8K
 iodepth=4
 
-size=3200M
+size=6400M
 numjobs=16
-io_size=200M
-io_limit=200M
+io_size=400M
+io_limit=400M
 
 direct=1
 buffered=0
