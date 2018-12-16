@@ -1,0 +1,376 @@
+2018. 12. 17. (월) 05:01:49 KST
+[SYSBENCH] Running benchmark...
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 16
+
+Doing OLTP test.
+Running non-transactional test
+Using Uniform distribution
+Using "BEGIN" for starting transactions
+Using auto_inc on the id column
+Threads started!
+Time limit exceeded, exiting...
+(last message repeated 15 times)
+Done.
+
+OLTP test statistics:
+    queries performed:
+        read:                            0
+        write:                           472142
+        other:                           0
+        total:                           472142
+    transactions:                        472142 (7868.93 per sec.)
+    deadlocks:                           0      (0.00 per sec.)
+    read/write requests:                 472142 (7868.93 per sec.)
+    other operations:                    0      (0.00 per sec.)
+
+Test execution summary:
+    total time:                          60.0008s
+    total number of events:              472142
+    total time taken by event execution: 959.5597
+    per-request statistics:
+         min:                                  0.11ms
+         avg:                                  2.03ms
+         max:                                126.34ms
+         approx.  95 percentile:              13.80ms
+
+Threads fairness:
+    events (avg/stddev):           29508.8750/47.00
+    execution time (avg/stddev):   59.9725/0.00
+
+2018. 12. 17. (월) 05:02:49 KST
+
+------------------------------------------------------------------
+
+mutex_t : 0xa462ea8 q:0xa462ea0, size:2048
+mutex_t : 0xa463478 q:0xa463470, size:1024
+mutex_t : 0xa4634d8 q:0xa4634d0, size:1024
+mutex_t : 0xa463538 q:0xa463530, size:1024
+nohost: [dm_nohost_probe] PROBE STARTED
+Initializing Connectal & DMA...
+subprocess pid 11436 completed status=0 0
+[initPortalHardwareOnce:270] fd 5 len 0
+[checkSignature:167] read status from '/dev/connectal' was only 0 bytes long
+checkSignature: driver 'zynqportal.c' signature mismatch 3431c6f01fcc1c478c8187d1e6992edc e059016ac411386d6e2597d43bc49e15
+checkSignature: driver 'portalmem.c' signature mismatch 0ba7c77e370fade81cfa5a0e5abb92f0 eef0fb3bacb31283d694f7aef3d380b3
+Main::allocating memory...
+USE_ACP = FALSE
+USE_ACP = FALSE
+Main::allocating memory finished!
+[dmaManagerOnce:44]
+Requested FCLK[0]=200000000 actually 200000000
+Requested Freq: 200.00, Actual Freq: 200.00, status=0
+LOG: DEBUG DUMP: gearSend = 1373106854, gearRec = -1216221555, aurSend = 1854795016, aurRec = 407583974, readSend=1027072864, writeSend=944949236
+nohost: [dm_nohost_probe] PROBE DONE!
+nohost: [dm_nohost_open] open done!
+!!! print info !!!
+Async status: 1
+use wirte buffer: 1
+Wait same mapping request(FLYING): 0
+use gc polling: 0
+use eviction polling: 0
+# of total block: 512
+# of total page: 8388608
+page per block: 16384
+# of translation block: 2
+# of translation page: 32768
+# of data block: 508
+# of data page: 8323072
+# of total cache mapping entry: 4096
+max # of ram reside cme: 1024
+max # of clean translation cache table: 512
+cache percentage: 25.000%
+!!! print info !!!
+BM_Init() End!
+mutex_t : 0xa483378 q:0xa483370, size:1024
+_nos:512
+bad_block_checking...[ 99.998474 ]
+badblock_cnt: 90
+_RNOS:4096
+bad block 294912 -> 67092480
+bad block 737280 -> 67076096
+bad block 770048 -> 67059712
+bad block 802816 -> 67043328
+bad block 835584 -> 67026944
+bad block 1474560 -> 67010560
+bad block 1490944 -> 66994176
+bad block 1884160 -> 66977792
+bad block 2359296 -> 66961408
+bad block 4620288 -> 66945024
+bad block 5783552 -> 66928640
+bad block 5931008 -> 66912256
+bad block 6520832 -> 66895872
+bad block 6619136 -> 66879488
+bad block 8896512 -> 66863104
+bad block 9060352 -> 66846720
+bad block 9191424 -> 66830336
+bad block 11255808 -> 66813952
+bad block 12763136 -> 66797568
+bad block 13467648 -> 66781184
+bad block 13533184 -> 66764800
+checking done!
+server waiting.....
+connected!!!
+
+WAF: 1.37
+
+WAF: 1.38
+
+WAF: 1.37
+
+WAF: 1.37
+
+WAF: 1.36
+
+WAF: 1.36
+
+WAF: 1.36
+
+WAF: 1.35
+
+WAF: 1.35
+
+WAF: 1.35
+
+WAF: 1.35
+
+WAF: 1.35
+^C
+
+
+[cdf]read---
+60	3	0.000002
+70	1	0.000003
+120	3791	0.003054
+130	52276	0.045128
+140	79421	0.109048
+150	46512	0.146482
+160	38740	0.177661
+170	37602	0.207924
+180	31294	0.233111
+190	23478	0.252006
+200	20249	0.268303
+210	19598	0.284076
+220	17757	0.298368
+230	14020	0.309652
+240	12272	0.319528
+250	11353	0.328666
+260	17038	0.342378
+270	38394	0.373279
+280	55596	0.418024
+290	55170	0.462427
+300	54389	0.506200
+310	53572	0.549317
+320	49451	0.589116
+330	45902	0.626060
+340	44909	0.662204
+350	44496	0.698015
+360	41282	0.731240
+370	36624	0.760716
+380	33510	0.787686
+390	31091	0.812709
+400	28323	0.835504
+410	25210	0.855794
+420	22067	0.873554
+430	19336	0.889116
+440	17086	0.902868
+450	15145	0.915057
+460	13242	0.925714
+470	11563	0.935021
+480	10280	0.943294
+490	9005	0.950542
+500	7917	0.956913
+510	7009	0.962555
+520	5899	0.967302
+530	5143	0.971441
+540	4748	0.975263
+550	3871	0.978378
+560	3489	0.981186
+570	2966	0.983573
+580	2548	0.985624
+590	2304	0.987478
+600	1903	0.989010
+610	1736	0.990407
+620	1596	0.991692
+630	1325	0.992758
+640	1163	0.993694
+650	976	0.994480
+660	854	0.995167
+670	773	0.995789
+680	628	0.996295
+690	601	0.996778
+700	538	0.997211
+710	404	0.997536
+720	374	0.997837
+730	336	0.998108
+740	326	0.998370
+750	275	0.998592
+760	218	0.998767
+770	201	0.998929
+780	151	0.999050
+790	158	0.999177
+800	119	0.999273
+810	108	0.999360
+820	90	0.999433
+830	84	0.999500
+840	79	0.999564
+850	83	0.999631
+860	67	0.999685
+870	49	0.999724
+880	42	0.999758
+890	28	0.999780
+900	28	0.999803
+910	22	0.999821
+920	26	0.999841
+930	18	0.999856
+940	20	0.999872
+950	21	0.999889
+960	12	0.999899
+970	16	0.999911
+980	9	0.999919
+990	12	0.999928
+1000	7	0.999934
+1010	5	0.999938
+1020	7	0.999944
+1030	5	0.999948
+1040	1	0.999949
+1050	3	0.999951
+1060	3	0.999953
+1070	7	0.999959
+1080	6	0.999964
+1090	1	0.999965
+1100	4	0.999968
+1110	5	0.999972
+1120	5	0.999976
+1130	2	0.999977
+1140	1	0.999978
+1150	3	0.999981
+1160	6	0.999986
+1170	1	0.999986
+1180	1	0.999987
+1190	2	0.999989
+1200	3	0.999991
+1210	3	0.999994
+1230	2	0.999995
+1240	2	0.999997
+1280	1	0.999998
+1330	1	0.999998
+1360	1	0.999999
+1370	1	1.000000
+a_type	l_type	max	min	avg	cnt	percentage
+0	0	62	0	5.854	48	0.00386%
+1	0	990	120	176.485	456627	36.75066%
+2	0	654	264	345.162	512	0.04121%
+3	0	1257	132	360.489	390780	31.45111%
+8	0	2	1	1.111	18	0.00145%
+9	0	1207	120	175.041	394584	31.75726%
+--------------------------------------------
+|            bench type:                   |
+--------------------------------------------
+----algorithm----
+[0~100(usec)]: 0
+[100~200(usec)]: 0
+[200~300(usec)]: 0
+[300~400(usec)]: 0
+[400~500(usec)]: 0
+[500~600(usec)]: 0
+[600~700(usec)]: 0
+[700~800(usec)]: 0
+[800~900(usec)]: 0
+[900~1000(usec)]: 0
+[over_ms]: 0
+[over__s]: 0
+----lower----
+[0~100(usec)]: 0
+[100~200(usec)]: 0
+[200~300(usec)]: 0
+[300~400(usec)]: 0
+[400~500(usec)]: 0
+[500~600(usec)]: 0
+[600~700(usec)]: 0
+[700~800(usec)]: 0
+[800~900(usec)]: 0
+[900~1000(usec)]: 0
+[over_ms]: 0
+[over__s]: 0
+----average----
+[avg_algo]: 0.0
+[avg_low]: 0.0
+-----lower_info----
+[write_op]: 0
+[read_op]: 0
+[trim_op]:0
+[WAF, RAF]: 0.000000, 0.000000
+[if rw test]: 0.000000(WAF), 0.000000(RAF)
+[all write Time]:0.0
+[all read Time]:0.0
+
+----summary----
+[all_time]: 0.0
+[size]: 77016.500000(mb)
+[FAIL NUM] 0
+[SUCCESS RATIO] 1.000000
+[throughput] inf(kb/s)
+             inf(mb/s)
+[cache hit cnt,ratio] 8178738, 6.582485
+[cache hit cnt,ratio dftl] 8178738, 0.829651
+[READ WRITE CNT] 1242500 8615543
+error cnt:155
+result of ms:
+---
+bye bye!
+# of gc: 25
+# of translation page gc: 25
+# of data page gc: 0
+# of translation page gc w/ data page gc: 0
+# of translation page gc w/ read op: 0
+# of evict: 820455
+# of buf hit: 4
+!!! print info !!!
+BH: buffer hit, H: hit, R: read, MC: memcpy, CE: clean eviction, DE: dirty eviction, GC: garbage collection
+a_type--->>> 0: BH, 1: H
+2: R & MC, 3: R & CE & MC
+4: R & DE & MC, 5: R & CE & GC & MC
+6: R & DE & GC & MC
+!!! print info !!!
+Cache hit on read: 851250
+Cache miss on read: 391292
+Cache hit on write: 7327488
+Cache miss on write: 349440
+
+Clean hit on read: 660983
+Dirty hit on read: 221357
+Clean hit on write: 80747
+Dirty hit on write: 7246741
+
+% of miss : 0.08
+# Clean eviction: 390780
+# Dirty eviction: 429675
+
+Clean eviciton on read: 390780
+Dirty eviction on read: 0
+Clean eviction on write: 0
+Dirty eviction on write: 429675
+
+Dirty eviction ratio: 52.37%
+Dirty eviction ratio on read: 0.00%
+Dirty eviction ratio on write: 100.00%
+
+WAF: 1.35
+
+0 25
+1 737759
+2 429675
+3 1813
+4 1813
+5 1242496
+6 7676928
+7 0
+8 0
+bdbm_mt max: 0
+nohost: Wait for all the on-going jobs to finish...
+nohost: [dm_nohost_close] MAP Download from HW!
+nohost: [dm_nohost_close] closed!
+write_q_hit:192272	read_q_hit:1	retry_hit:0
