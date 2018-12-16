@@ -1,12 +1,6 @@
 #!/bin/bash
 
-MOUNT_PATH=/media/robusta
-
-USER=root
-PASSWORD=191066
-
-RED='\033[0;31m'
-NC='\033[0m'
+source global.sh
 
 echo "[SETUP] Stopping MySQL daemon..."
 sudo service mysql stop
@@ -41,4 +35,4 @@ sudo chown -R mysql:mysql /var/lib/mysql
 
 echo "[SETUP] Launching MySQL daemon..."
 sudo service mysql start & sleep 5
-sudo mysql --user=$USER --password=$PASSWORD < ./mysql/create.sql
+sudo mysql --user=$USER --password=$PASSWORD < ../mysql/create.sql
