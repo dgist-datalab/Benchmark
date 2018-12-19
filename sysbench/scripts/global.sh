@@ -3,6 +3,8 @@
 K=1000
 M=$((1000 * K))
 
+MOUNT_PATH=/media/robusta
+
 # 10M-> 2.3G
 TABLE_SIZE=$((200 * M))
 MAX_REQ=0
