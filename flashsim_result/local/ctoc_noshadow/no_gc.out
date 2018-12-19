@@ -1,0 +1,588 @@
+If you want locality test Usage : [./simulator (LOCALITY(%)) (RATIO)]
+defalut locality=50% RATIO=0.5
+mutex_t : 0x147f418 q:0x147f410, size:1024
+mutex_t : 0x147f478 q:0x147f470, size:1024
+mutex_t : 0x147f4d8 q:0x147f4d0, size:1024
+nohost: [dm_nohost_probe] PROBE STARTED
+Initializing Connectal & DMA...
+subprocess pid 15805 completed status=0 0
+[initPortalHardwareOnce:270] fd 5 len 0
+[checkSignature:167] read status from '/dev/connectal' was only 0 bytes long
+checkSignature: driver 'zynqportal.c' signature mismatch 3431c6f01fcc1c478c8187d1e6992edc e059016ac411386d6e2597d43bc49e15
+checkSignature: driver 'portalmem.c' signature mismatch 0ba7c77e370fade81cfa5a0e5abb92f0 eef0fb3bacb31283d694f7aef3d380b3
+Main::allocating memory...
+USE_ACP = FALSE
+USE_ACP = FALSE
+Main::allocating memory finished!
+[dmaManagerOnce:44]
+Requested FCLK[0]=200000000 actually 200000000
+Requested Freq: 200.00, Actual Freq: 200.00, status=0
+LOG: DEBUG DUMP: gearSend = 1277132812, gearRec = 1401576683, aurSend = -510842483, aurRec = -196790312, readSend=-1055902512, writeSend=-781732868
+nohost: [dm_nohost_probe] PROBE DONE!
+nohost: [dm_nohost_open] open done!
+!!! print info !!!
+Async status: 1
+use wirte buffer: 1
+Wait same mapping request(FLYING): 0
+use gc polling: 0
+use eviction polling: 0
+# of total block: 512
+# of total page: 8388608
+page per block: 16384
+# of translation block: 2
+# of translation page: 32768
+# of data block: 508
+# of data page: 8323072
+# of total cache mapping entry: 4096
+max # of ram reside cme: 512
+max # of clean translation cache table: 256
+cache percentage: 12.500%
+!!! print info !!!
+BM_Init() End!
+mutex_t : 0x149f318 q:0x149f310, size:1024
+mutex_t : 0x14a5e98 q:0x14a5e90, size:1024
+mutex_t : 0x14a5ef8 q:0x14a5ef0, size:1024
+_nos:512
+bad_block_checking...[ 99.998474 ]
+badblock_cnt: 90
+_RNOS:4096
+bad block 294912 -> 67092480
+bad block 737280 -> 67076096
+bad block 770048 -> 67059712
+bad block 802816 -> 67043328
+bad block 835584 -> 67026944
+bad block 1474560 -> 67010560
+bad block 1490944 -> 66994176
+bad block 1884160 -> 66977792
+bad block 2359296 -> 66961408
+bad block 4620288 -> 66945024
+bad block 5783552 -> 66928640
+bad block 5931008 -> 66912256
+bad block 6520832 -> 66895872
+bad block 6619136 -> 66879488
+bad block 8896512 -> 66863104
+bad block 9060352 -> 66846720
+bad block 9191424 -> 66830336
+bad block 11255808 -> 66813952
+bad block 12763136 -> 66797568
+bad block 13467648 -> 66781184
+bad block 13533184 -> 66764800
+checking done!
+making seq Set bench!
+testing...... [100%] done!
+
+making mixed bench!
+ testing...... [2%]tpage_GC()
+ testing...... [3%]tpage_GC()
+ testing...... [4%]tpage_GC()
+ testing...... [5%]tpage_GC()
+
+WAF: 1.88
+ testing...... [6%]tpage_GC()
+ testing...... [7%]tpage_GC()
+ testing...... [8%]tpage_GC()
+ testing...... [10%]tpage_GC()
+ testing...... [11%]tpage_GC()
+
+WAF: 1.88
+ testing...... [12%]tpage_GC()
+ testing...... [13%]tpage_GC()
+ testing...... [14%]tpage_GC()
+ testing...... [15%]tpage_GC()
+ testing...... [16%]tpage_GC()
+ testing...... [17%]
+WAF: 1.87
+tpage_GC()
+ testing...... [18%]tpage_GC()
+ testing...... [20%]tpage_GC()
+ testing...... [21%]tpage_GC()
+ testing...... [22%]tpage_GC()
+ testing...... [23%]tpage_GC()
+
+WAF: 1.87
+ testing...... [24%]tpage_GC()
+ testing...... [25%]tpage_GC()
+ testing...... [26%]tpage_GC()
+ testing...... [27%]tpage_GC()
+ testing...... [29%]tpage_GC()
+
+WAF: 1.87
+ testing...... [30%]tpage_GC()
+ testing...... [31%]tpage_GC()
+ testing...... [32%]tpage_GC()
+ testing...... [33%]tpage_GC()
+ testing...... [34%]tpage_GC()
+ testing...... [35%]
+WAF: 1.87
+tpage_GC()
+ testing...... [36%]tpage_GC()
+ testing...... [38%]tpage_GC()
+ testing...... [39%]tpage_GC()
+ testing...... [40%]tpage_GC()
+ testing...... [41%]tpage_GC()
+
+WAF: 1.87
+ testing...... [42%]tpage_GC()
+ testing...... [43%]tpage_GC()
+ testing...... [44%]tpage_GC()
+ testing...... [45%]tpage_GC()
+ testing...... [46%]tpage_GC()
+ testing...... [47%]
+WAF: 1.87
+ testing...... [48%]tpage_GC()
+ testing...... [49%]tpage_GC()
+ testing...... [50%]tpage_GC()
+ testing...... [51%]tpage_GC()
+ testing...... [52%]tpage_GC()
+ testing...... [53%]
+WAF: 1.87
+tpage_GC()
+ testing...... [54%]tpage_GC()
+ testing...... [55%]tpage_GC()
+ testing...... [57%]tpage_GC()
+ testing...... [58%]tpage_GC()
+ testing...... [59%]tpage_GC()
+
+WAF: 1.87
+ testing...... [60%]tpage_GC()
+ testing...... [61%]tpage_GC()
+ testing...... [62%]tpage_GC()
+ testing...... [63%]tpage_GC()
+ testing...... [64%]tpage_GC()
+ testing...... [65%]
+WAF: 1.87
+ testing...... [66%]tpage_GC()
+ testing...... [67%]tpage_GC()
+ testing...... [68%]tpage_GC()
+ testing...... [69%]tpage_GC()
+ testing...... [70%]tpage_GC()
+ testing...... [71%]
+WAF: 1.87
+tpage_GC()
+ testing...... [72%]tpage_GC()
+ testing...... [73%]tpage_GC()
+ testing...... [74%]tpage_GC()
+ testing...... [75%]tpage_GC()
+ testing...... [77%]tpage_GC()
+
+WAF: 1.87
+ testing...... [78%]tpage_GC()
+ testing...... [79%]tpage_GC()
+ testing...... [80%]tpage_GC()
+ testing...... [81%]tpage_GC()
+ testing...... [82%]tpage_GC()
+ testing...... [83%]
+WAF: 1.87
+tpage_GC()
+ testing...... [84%]tpage_GC()
+ testing...... [86%]tpage_GC()
+ testing...... [87%]tpage_GC()
+ testing...... [88%]tpage_GC()
+ testing...... [89%]tpage_GC()
+
+WAF: 1.87
+ testing...... [90%]tpage_GC()
+ testing...... [91%]tpage_GC()
+ testing...... [92%]tpage_GC()
+ testing...... [93%]tpage_GC()
+ testing...... [95%]tpage_GC()
+
+WAF: 1.87
+ testing...... [96%]tpage_GC()
+ testing...... [97%]tpage_GC()
+ testing...... [98%]tpage_GC()
+ testing...... [99%]tpage_GC()
+testing...... [100%] done!
+
+req_cnt_test:cnt -> 6706903:6710884 fuck
+
+
+a_type	l_type	max	min	avg	cnt	percentage
+--------------------------------------------
+|            bench type:                   |
+--------------------------------------------
+----algorithm----
+[0~100(usec)]: 3352166
+[100~200(usec)]: 0
+[200~300(usec)]: 0
+[300~400(usec)]: 0
+[400~500(usec)]: 0
+[500~600(usec)]: 0
+[600~700(usec)]: 0
+[700~800(usec)]: 54
+[800~900(usec)]: 1972
+[900~1000(usec)]: 1220
+[over_ms]: 30
+[over__s]: 0
+----lower----
+[0~100(usec)]: 0
+[100~200(usec)]: 0
+[200~300(usec)]: 0
+[300~400(usec)]: 0
+[400~500(usec)]: 0
+[500~600(usec)]: 0
+[600~700(usec)]: 0
+[700~800(usec)]: 0
+[800~900(usec)]: 0
+[900~1000(usec)]: 0
+[over_ms]: 0
+[over__s]: 0
+----average----
+[avg_algo]: 0.9
+[avg_low]: 0.0
+-----lower_info----
+[write_op]: 0
+[read_op]: 0
+[trim_op]:0
+[WAF, RAF]: 0.000000, 0.000000
+[if rw test]: 0.000000(WAF), 0.000000(RAF)
+[all write Time]:0.0
+[all read Time]:0.0
+
+----summary----
+[all_time]: 43.329667
+[size]: 26214.390625(mb)
+[FAIL NUM] 0
+[SUCCESS RATIO] 1.000000
+[throughput] 619518.631426(kb/s)
+             604.998664(mb/s)
+[READ WRITE CNT] 0 3355442
+error cnt:10
+
+
+
+[cdf]read---
+50	2	0.000001
+60	90	0.000055
+70	129	0.000132
+80	51	0.000162
+90	13	0.000170
+100	4	0.000172
+120	2548	0.001691
+130	30326	0.019766
+140	45981	0.047171
+150	36918	0.069175
+160	31763	0.088106
+170	30550	0.106315
+180	29064	0.123637
+190	27021	0.139742
+200	26258	0.155392
+210	25947	0.170857
+220	24253	0.185312
+230	20578	0.197577
+240	18778	0.208769
+250	17744	0.219345
+260	18821	0.230563
+270	29536	0.248167
+280	34102	0.268492
+290	34587	0.289106
+300	38844	0.312258
+310	41322	0.336887
+320	40699	0.361144
+330	41396	0.385817
+340	43936	0.412003
+350	46960	0.439992
+360	46305	0.467591
+370	45351	0.494621
+380	45456	0.521713
+390	45584	0.548882
+400	45059	0.575738
+410	42161	0.600867
+420	40581	0.625054
+430	40071	0.648937
+440	38389	0.671817
+450	35803	0.693157
+460	33501	0.713124
+470	31906	0.732140
+480	30663	0.750416
+490	28465	0.767382
+500	26152	0.782969
+510	24543	0.797597
+520	23410	0.811549
+530	21934	0.824623
+540	20180	0.836650
+550	18837	0.847877
+560	17566	0.858347
+570	16559	0.868216
+580	15199	0.877275
+590	14036	0.885641
+600	13178	0.893495
+610	12186	0.900758
+620	11125	0.907389
+630	10624	0.913721
+640	9744	0.919529
+650	9442	0.925156
+660	8575	0.930267
+670	7837	0.934938
+680	7485	0.939399
+690	6999	0.943571
+700	6433	0.947405
+710	5931	0.950940
+720	5607	0.954282
+730	5199	0.957381
+740	4774	0.960226
+750	4479	0.962896
+760	4095	0.965336
+770	3901	0.967661
+780	3677	0.969853
+790	3265	0.971799
+800	3128	0.973663
+810	2951	0.975422
+820	2862	0.977128
+830	2494	0.978614
+840	2306	0.979989
+850	2181	0.981289
+860	2107	0.982544
+870	1905	0.983680
+880	1719	0.984704
+890	1632	0.985677
+900	1551	0.986602
+910	1503	0.987497
+920	1285	0.988263
+930	1253	0.989010
+940	1176	0.989711
+950	1128	0.990383
+960	1044	0.991005
+970	881	0.991531
+980	887	0.992059
+990	821	0.992549
+1000	811	0.993032
+1010	730	0.993467
+1020	692	0.993879
+1030	650	0.994267
+1040	558	0.994599
+1050	560	0.994933
+1060	513	0.995239
+1070	460	0.995513
+1080	461	0.995788
+1090	440	0.996050
+1100	393	0.996284
+1110	376	0.996509
+1120	350	0.996717
+1130	312	0.996903
+1140	298	0.997081
+1150	311	0.997266
+1160	246	0.997413
+1170	243	0.997558
+1180	234	0.997697
+1190	222	0.997829
+1200	248	0.997977
+1210	217	0.998106
+1220	155	0.998199
+1230	179	0.998305
+1240	165	0.998404
+1250	136	0.998485
+1260	139	0.998568
+1270	135	0.998648
+1280	141	0.998732
+1290	133	0.998812
+1300	106	0.998875
+1310	104	0.998937
+1320	101	0.998997
+1330	94	0.999053
+1340	83	0.999102
+1350	85	0.999153
+1360	86	0.999204
+1370	84	0.999254
+1380	66	0.999294
+1390	79	0.999341
+1400	61	0.999377
+1410	51	0.999408
+1420	56	0.999441
+1430	55	0.999474
+1440	48	0.999502
+1450	34	0.999523
+1460	53	0.999554
+1470	48	0.999583
+1480	42	0.999608
+1490	47	0.999636
+1500	31	0.999654
+1510	32	0.999673
+1520	29	0.999691
+1530	23	0.999704
+1540	25	0.999719
+1550	20	0.999731
+1560	19	0.999743
+1570	21	0.999755
+1580	14	0.999763
+1590	18	0.999774
+1600	23	0.999788
+1610	15	0.999797
+1620	14	0.999805
+1630	14	0.999813
+1640	13	0.999821
+1650	10	0.999827
+1660	14	0.999835
+1670	10	0.999841
+1680	13	0.999849
+1690	5	0.999852
+1700	13	0.999860
+1710	6	0.999864
+1720	13	0.999871
+1730	4	0.999874
+1740	10	0.999880
+1750	9	0.999885
+1760	6	0.999889
+1770	11	0.999895
+1780	13	0.999903
+1790	7	0.999907
+1800	8	0.999912
+1810	5	0.999915
+1820	5	0.999918
+1830	8	0.999923
+1840	3	0.999924
+1850	7	0.999928
+1860	6	0.999932
+1870	7	0.999936
+1880	1	0.999937
+1890	3	0.999939
+1900	5	0.999942
+1910	3	0.999943
+1920	5	0.999946
+1930	2	0.999948
+1940	2	0.999949
+1950	1	0.999949
+1960	3	0.999951
+1970	4	0.999954
+1980	6	0.999957
+2010	1	0.999958
+2040	2	0.999959
+2050	1	0.999959
+2070	1	0.999960
+2100	3	0.999962
+2120	2	0.999963
+2130	1	0.999964
+2150	1	0.999964
+2160	1	0.999965
+2180	1	0.999965
+2210	1	0.999966
+2220	1	0.999967
+2230	1	0.999967
+2240	1	0.999968
+2260	1	0.999968
+2280	1	0.999969
+2300	1	0.999970
+2320	2	0.999971
+2370	2	0.999972
+2390	2	0.999973
+2400	1	0.999974
+2500	1	0.999974
+2560	1	0.999975
+2640	1	0.999976
+2700	1	0.999976
+2750	1	0.999977
+2780	1	0.999977
+a_type	l_type	max	min	avg	cnt	percentage
+0	0	293	57	64.412	291	0.01734%
+1	0	2610	120	225.709	523399	31.19548%
+2	0	835	262	375.984	256	0.01526%
+3	0	2779	248	458.036	1153820	68.76965%
+--------------------------------------------
+|            bench type:                   |
+--------------------------------------------
+----algorithm----
+[0~100(usec)]: 3353729
+[100~200(usec)]: 0
+[200~300(usec)]: 0
+[300~400(usec)]: 0
+[400~500(usec)]: 0
+[500~600(usec)]: 0
+[600~700(usec)]: 0
+[700~800(usec)]: 0
+[800~900(usec)]: 0
+[900~1000(usec)]: 0
+[over_ms]: 1638
+[over__s]: 0
+----lower----
+[0~100(usec)]: 1676293
+[100~200(usec)]: 1174
+[200~300(usec)]: 8
+[300~400(usec)]: 0
+[400~500(usec)]: 0
+[500~600(usec)]: 0
+[600~700(usec)]: 0
+[700~800(usec)]: 0
+[800~900(usec)]: 0
+[900~1000(usec)]: 0
+[over_ms]: 0
+[over__s]: 0
+----average----
+[avg_algo]: 0.14
+[avg_low]: 0.110
+-----lower_info----
+[write_op]: 0
+[read_op]: 0
+[trim_op]:0
+[WAF, RAF]: 0.000000, 0.000000
+[if rw test]: 0.000000(WAF), 0.000000(RAF)
+[all write Time]:0.0
+[all read Time]:0.0
+
+----summary----
+[all_time]: 72.818270
+[size]: 26214.390625(mb)
+[FAIL NUM] 0
+[SUCCESS RATIO] 1.000000
+[throughput] 368637.376307(kb/s)
+             359.997438(mb/s)
+[cache hit cnt,ratio] 0, 0.000000
+[cache hit cnt,ratio dftl] 0, 0.000000
+[READ WRITE CNT] 1677804 1677638
+error cnt:10
+result of ms:
+---
+bye bye!
+# of gc: 88
+# of translation page gc: 88
+# of data page gc: 0
+# of translation page gc w/ data page gc: 0
+# of translation page gc w/ read op: 0
+# of evict: 2619215
+# of buf hit: 291
+!!! print info !!!
+BH: buffer hit, H: hit, R: read, MC: memcpy, CE: clean eviction, DE: dirty eviction, GC: garbage collection
+a_type--->>> 0: BH, 1: H
+2: R & MC, 3: R & CE & MC
+4: R & DE & MC, 5: R & CE & GC & MC
+6: R & DE & GC & MC
+!!! print info !!!
+Cache hit on read: 523399
+Cache miss on read: 1163634
+Cache hit on write: 3761198
+Cache miss on write: 1270738
+
+Clean hit on read: 261003
+Dirty hit on read: 262468
+Clean hit on write: 194913
+Dirty hit on write: 3566285
+
+% of miss : 0.39
+# Clean eviction: 1153820
+# Dirty eviction: 1465395
+
+Clean eviciton on read: 1153820
+Dirty eviction on read: 0
+Clean eviction on write: 0
+Dirty eviction on write: 1465395
+
+Dirty eviction ratio: 55.95%
+Dirty eviction ratio on read: 0.00%
+Dirty eviction ratio on write: 100.00%
+
+WAF: 1.87
+
+0 88
+1 3692274
+2 1465395
+3 2
+4 2
+5 1677475
+6 5031936
+7 0
+8 0
+bdbm_mt max: 0
+nohost: Wait for all the on-going jobs to finish...
+nohost: [dm_nohost_close] MAP Download from HW!
+nohost: [dm_nohost_close] closed!
+write_q_hit:37	read_q_hit:38	retry_hit:0
+locality check:0.500178
