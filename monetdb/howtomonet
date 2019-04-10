@@ -11,7 +11,7 @@
 8. vim .monetdb 후 다음과 같이 입력 후 저장
     user=monetdb
     password=monetdb
-9. Benchmark/db_bench/monetdb/ 폴더로 이동
+9. Benchmark/monetdb/ 폴더로 이동
 10. unzip tpc-ds-tool.zip
 11. cd v2.10.1rc3/tools
 12. make
@@ -24,14 +24,14 @@
 19. https://github.com/Agirish/tpcds/ 에서 query*.sql들 queries 폴더에 넣기
 20. https://github.com/cwida/tpcds-result-reproduction/tree/master/tools 에서 tpcds.sql, count.sql 가져와서 scripts 폴더에 넣기
 21. https://github.com/cwida/tpcds-result-reproduction/tree/master/systems_results/monetdb 에서 load.monetdb.sql 가져와서 scripts 폴더에 넣기
-22. cd Benchmark/db_bench/monetdb/scripts
+22. cd Benchmark/monetdb/scripts
 23. vim load.monetdb.sql
-24 :%s/PWD/\/~~~something\/Benchmark\/db_bench\/monetdb\/data
+24 :%s/PWD/\/~~~something\/Benchmark\/monetdb\/data
 25. cd ~/
-26. mserver5 --daemon=yes --dbpath=/something~~~/Benchmark/db_bench/monetdb/farms   # DataBase directory 지정, monetdb 서버 실행
-27. mclient -p 50000 /something~~~/Benchmark/db_bench/monetdb/scripts/tpcds.sql   # DB scheme 만들기
-28. mclient -p 50000 /something~~~/Benchmark/db_bench/monetdb/scripts/load.monetdb.sql   # tpc-ds data load
-29. mclient -p 50000 /something~~~/Benchmark/db_bench/monetdb/scripts/count.sql | tee count_result     # count tuples
-30. mclient -p 50000 /something~~~/Benchmark/db_bench/monetdb/queries/query??.sql | tee query??_result    # 쿼리 무작위로 5개 실행
+26. mserver5 --daemon=yes --dbpath=/something~~~/Benchmark/monetdb/farms   # DataBase directory 지정, monetdb 서버 실행
+27. mclient -p 50000 /something~~~/Benchmark/monetdb/scripts/tpcds.sql   # DB scheme 만들기
+28. mclient -p 50000 /something~~~/Benchmark/monetdb/scripts/load.monetdb.sql   # tpc-ds data load
+29. mclient -p 50000 /something~~~/Benchmark/monetdb/scripts/count.sql | tee count_result     # count tuples
+30. mclient -p 50000 /something~~~/Benchmark/monetdb/queries/query??.sql | tee query??_result    # 쿼리 무작위로 5개 실행
 31. result 파일 잘 보관하기
 32. mserver 종료
