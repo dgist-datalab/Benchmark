@@ -28,10 +28,10 @@
 23. vim load.monetdb.sql
 24 :%s/PWD/\/~~~something\/Benchmark\/monetdb\/data
 25. cd ~/
-26. mserver5 --daemon=yes --dbpath=/something~~~/Benchmark/monetdb/farms   # DataBase directory 지정, monetdb 서버 실행
-27. mclient -p 50000 /something~~~/Benchmark/monetdb/scripts/tpcds.sql (실행중인 mserver는 그대로 두고 터미널 새로 켜서!!)  # DB scheme 만들기
-28. mclient -p 50000 /something~~~/Benchmark/monetdb/scripts/load.monetdb.sql (여기서부터도 마찬가지로 다 루트권한으로 명령 실행해주세요)  # tpc-ds data load
-29. mclient -p 50000 /something~~~/Benchmark/monetdb/scripts/count.sql | tee count_result     # count tuples
-30. mclient -p 50000 /something~~~/Benchmark/monetdb/queries/query??.sql | tee query??_result    # 쿼리 무작위로 5개 실행
+26. mserver5 --set mapi_port=51337 --daemon=yes --dbpath=/something~~~/Benchmark/monetdb/farms   # DataBase directory 지정, monetdb 서버 실행
+27. mclient -p 51337 /something~~~/Benchmark/monetdb/scripts/tpcds.sql (실행중인 mserver는 그대로 두고 터미널 새로 켜서!!)  # DB scheme 만들기
+28. mclient -p 51337 /something~~~/Benchmark/monetdb/scripts/load.monetdb.sql (여기서부터도 마찬가지로 다 루트권한으로 명령 실행해주세요)  # tpc-ds data load
+29. mclient -p 51337 /something~~~/Benchmark/monetdb/scripts/count.sql | tee count_result     # count tuples
+30. mclient -p 51337 /something~~~/Benchmark/monetdb/queries/query??.sql | tee query??_result    # 쿼리 무작위로 5개 실행
 31. result 파일 잘 보관하기
 32. mserver 종료
